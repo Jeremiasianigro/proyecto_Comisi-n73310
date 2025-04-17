@@ -3,9 +3,18 @@
     padding: 0;
     
 }
+@font-face {
+    font-family: "titulos";
+    src: url(../font/American\ Captain.ttf);
+}
+h1{
+    font-family: "titulos";
+    font-size: 30px;
+}
+
 .navbar{
     width: 100%;
-    height: 100px;
+    height: 150px;
     background-color: rgba(177, 213, 244, 0.403);
 }
 #logonav{
@@ -14,12 +23,56 @@
     border-radius: 40%;
 }
 .navbar ol {
-    list-style: none;   /* Saca los puntos */
+    list-style: none;   
     padding: 0;
     margin: 0;
-    display: flex;      /* Esto pone los <li> en línea */
-    gap: 20px;          /* Espacio entre los ítems */
+    display: flex;      
+    gap: 20px;          
   }
 .navbar li {
-    list-style: none;
+    font-family: "titulos";
+    font-size: 20px;
+    color: white;
+    background-color: rgb(87, 7, 71);
+    border: 2px, solid, black;
+    border-radius: 10%;
   }
+  .navbar li a{
+    color: inherit;       
+    text-decoration: none; 
+  }
+  .imagenhome{
+    width: 80vh;
+    height: auto;
+  }
+  .imagenhome img{
+    width: 100%;
+    height: auto;
+  }
+
+.grilla{
+    width: 100%;
+    height: auto;
+    display: flex;      
+    gap: 20px; 
+}
+.grilla #cards{
+    width: 25vh;
+    height: 20vw;
+}
+.grilla #cards img{
+    width: 100%;
+    height: 100%;
+    border: 2px, solid, black;
+}
+.redes{
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    display: flex;      
+    gap: 20px;  
+  }
+.redes img{
+    width: 30px;
+    height: 30px;
+}
