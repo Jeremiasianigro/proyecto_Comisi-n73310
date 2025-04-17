@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.navbar{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(177, 213, 244, 0.403);
+}
+#logonav{
+    width: 80px;
+    height: 80px;
+    border-radius: 40%;
+}
+.navbar ol {
+    list-style: none;   /* Saca los puntos */
+    padding: 0;
+    margin: 0;
+    display: flex;      /* Esto pone los <li> en línea */
+    gap: 20px;          /* Espacio entre los ítems */
+  }
+.navbar li {
+    list-style: none;
+  }
