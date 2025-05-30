@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    
-    
+    background-color: #ccc;   
 }
+
 @font-face {
     font-family: "titulos";
     src: url(../font/American\ Captain.ttf);
@@ -13,14 +13,12 @@
     font-family: "texto";
     src: url(../font/Nunito-Regular.ttf);
 }
-h1{
-    font-family: "titulos";
-    font-size: 30px;
-}
+
 h2{
     font-family: "titulos";
     font-size: 25px;
 }
+/*navbar*/
 .navbar {
     width: 100%;
     height: 100px;
@@ -34,6 +32,9 @@ h2{
     left: 0;
     z-index: 1000;
 }
+.logo-container{
+    background-color: rgba(255, 255, 255, 0.322);
+}
 #logonav {
     width: 80px;
     height: 80px;
@@ -41,6 +42,7 @@ h2{
 }
 
 .nav-links {
+    background-color: rgba(255, 255, 255, 0.322);
     list-style: none;   
     padding: 0;
     margin: 0;
@@ -61,18 +63,52 @@ h2{
 .nav-links li a {
     color: inherit;
     text-decoration: none;
+    background-color: rgb(87, 7, 71);
+}
+@media (max-width: 768px) {
+    .navbar {
+        height: 70px;
+        padding: 0 10px;
+    }
+
+    #logonav {
+        width: 60px;
+        height: 60px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links li {
+        font-size: 16px;
+        padding: 3px 8px;
+    }
 }
 
 
+/*page home*/
+.titulo{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+     
+}
+.titulo h1{
+    font-family: "titulos";
+    font-size: 30px;
+}
 .imagenhome {
     width: 100vw; 
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ccc;
+    
 }
-
 #box-imagen-home {
     width: 80vw;
     height: 70vh;
@@ -87,58 +123,142 @@ h2{
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+}
+
+@media (max-width: 768px) {
+    #box-imagen-home {
+        width: 80vw;
+        height: 50vh;
+    }
+
+    #box-imagen-home img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/*page peliculas page series*/
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+.card{
+    overflow: hidden;
+    background-color: #ccc; 
+    border: none;  
+}
+.card img {
+    height: 500px; 
+    width: 350px; 
+    object-fit: cover; 
+    display: block;
+    margin: auto;
+    transition: transform 0.3s ease-in-out;
+}
+.card:hover img {
+    animation: zoomIn 0.3s forwards;
+}
+@media (max-width: 768px) {
+    .card img {
+    height: 400px; 
+    width: 250px; 
+    }
     
 }
 
-
-.grilla{
-    width: 100%;
-    height: auto;
-    display: flex;      
-    gap: 20px; 
-}
-.grilla #cards{
-    width: 25vh;
-    height: 20vw;
-}
-.grilla #cards img{
-    width: 100%;
-    height: 100%;
-    border: 2px, solid, black;
-}
-.nosotrosprincipal{
-    width: 100%;
-    height: auto;
-    display: flex;      
-    gap: 20px; 
-}
-.nosotrosprincipal #imagen{
-    width: 60vh;
-    height: 30vw;
-}
-.nosotrosprincipal #imagen img{
-    width: 100%;
-    height: 100%;
-}
-.nosotrosprincipal #descripcion{
-    padding: 5px;
-    width: 60vh;
-    height: 30vw;
-
-}
-.nosotrosprincipal #descripcion p{
-    font-family: "texto";
-    font-size: 20px;
-    color: black;
+/* page nosotros*/
+.nosotrosprincipal {
+    margin-top: 10%;
+    padding: 5%;
+    display: grid;
+    grid-template-areas: "imagen descripcion";
+    grid-template-columns: 50vw auto;
+    gap: 50px; 
+    align-items: center; 
+    justify-content: center;
 }
 
+#imagen {
+    grid-area: imagen;
+    display: flex;
+    justify-content: center;
+}
+
+#imagen img {
+    width: 70vw;
+    height: 70vh;
+    object-fit: cover; 
+}
+
+#descripcion {
+    grid-area: descripcion;
+}
+
+#descripcion h2 {
+    font-size: 2rem; 
+}
+
+#texto {
+    font-size: 1.2rem; 
+    line-height: 1.5; 
+}
+@media (max-width: 768px) {
+    .nosotrosprincipal {
+        display: grid;
+        grid-template-areas: 
+            "imagen"
+            "descripcion";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 10px;
+        text-align: center; 
+    }
+
+    #imagen {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #imagen img {
+        width: 90vw;
+        height: 60vh;
+        object-fit: cover; 
+    }
+
+    #descripcion {
+        padding: 10px; 
+    }
+
+    #descripcion h2 {
+        font-size: 1.8rem; 
+    }
+
+    #texto {
+        font-size: 1rem; 
+        line-height: 1.6; 
+    }
+}
+
+
+/*page contacto*/
+
+/*footer*/
 footer{
     width: 100vw;
-    height: auto;
-    background-color: #ccc;
+    height: auto;    
 }
 
 .redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 30px;
     width: 100%;
     height: auto;
@@ -148,4 +268,15 @@ footer{
 .redes img{
     width: 30px;
     height: 30px;
+}
+@media (max-width: 768px) {
+    
+    .redes {
+        margin-top: 1%;
+    }
+
+    .redes img {
+        width: 40px; 
+        height: 40px;
+    }
 }
