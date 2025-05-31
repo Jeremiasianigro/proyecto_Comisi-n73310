@@ -1,0 +1,312 @@
+@font-face {
+  font-family: "titulos";
+  src: url(../font/American\ Captain.ttf);
+}
+@font-face {
+  font-family: "texto";
+  src: url(../font/Nunito-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #ccc;
+}
+
+.navbar {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.322);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.navbar #logonav {
+  width: 80px;
+  height: 80px;
+  border-radius: 40%;
+}
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.navbar .nav-links li {
+  font-family: "titulos";
+  font-size: 20px;
+  color: white;
+  background-color: rgb(87, 7, 71);
+  border: 2px solid black;
+  border-radius: 10%;
+  padding: 5px 10px;
+}
+.navbar .nav-links li a {
+  color: inherit;
+  text-decoration: none;
+  background-color: rgb(87, 7, 71);
+}
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px;
+    padding: 0 10px;
+  }
+  .navbar #logonav {
+    width: 60px;
+    height: 60px;
+  }
+  .navbar .nav-links {
+    gap: 10px;
+  }
+  .navbar .nav-links li {
+    font-size: 16px;
+    padding: 3px 8px;
+  }
+}
+@media (max-width: 768px) and (max-width: 480px) {
+  .navbar {
+    height: 60px;
+    padding: 0 5px;
+  }
+  .navbar #logonav {
+    width: 50px;
+    height: 50px;
+  }
+  .navbar .nav-links {
+    gap: 5px;
+  }
+  .navbar .nav-links li {
+    font-size: 14px;
+    padding: 2px 6px;
+  }
+}
+
+.imagenhome {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagenhome #box-imagen-home {
+  width: 80vw;
+  height: 70vh;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.imagenhome #box-imagen-home img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .imagenhome #box-imagen-home {
+    width: 80vw;
+    height: 50vh;
+  }
+  .imagenhome #box-imagen-home img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+.titulo {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.titulo h1 {
+  font-family: "titulos";
+  font-size: 30px;
+}
+
+.card {
+  overflow: hidden;
+  background-color: #ccc;
+  border: none;
+}
+.card img {
+  height: 500px;
+  width: 350px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+  transition: transform 0.3s ease-in-out;
+}
+.card img:hover {
+  animation: zoomIn 0.3s forwards;
+}
+@media (max-width: 768px) {
+  .card img {
+    height: 400px;
+    width: 250px;
+  }
+}
+
+.nosotrosprincipal {
+  margin-top: 5%;
+  padding: 5%;
+  display: grid;
+  grid-template-areas: "imagen descripcion";
+  grid-template-columns: 50vw auto;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+.nosotrosprincipal #imagen {
+  grid-area: imagen;
+  display: flex;
+  justify-content: center;
+}
+.nosotrosprincipal #imagen img {
+  width: 70vw;
+  height: 70vh;
+  object-fit: cover;
+}
+.nosotrosprincipal #descripcion {
+  grid-area: descripcion;
+}
+.nosotrosprincipal #descripcion h2 {
+  font-family: "titulos";
+  font-size: 2rem;
+}
+.nosotrosprincipal #texto {
+  font-family: "texto";
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .nosotrosprincipal .nosotrosprincipal {
+    display: grid;
+    grid-template-areas: "imagen" "descripcion";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    text-align: center;
+  }
+  .nosotrosprincipal .nosotrosprincipal #imagen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .nosotrosprincipal .nosotrosprincipal #imagen img {
+    width: 90vw;
+    height: 60vh;
+    object-fit: cover;
+  }
+  .nosotrosprincipal .nosotrosprincipal #descripcion {
+    padding: 10px;
+  }
+  .nosotrosprincipal .nosotrosprincipal #descripcion h2 {
+    font-size: 1.8rem;
+  }
+  .nosotrosprincipal .nosotrosprincipal #texto {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+.contactanosprincipal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ccc;
+}
+.contactanosprincipal form {
+  background-color: #e6e6e6;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+.contactanosprincipal form input, .contactanosprincipal form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #666;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.contactanosprincipal form button {
+  background-color: rgb(120, 40, 100);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+}
+.contactanosprincipal form button:hover {
+  background-color: rgb(87, 7, 71);
+}
+@media (max-width: 600px) {
+  .contactanosprincipal form {
+    max-width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .contactanosprincipal form {
+    max-width: 85%;
+    padding: 15px;
+  }
+  .contactanosprincipal form input, .contactanosprincipal form textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .contactanosprincipal form button {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
+
+footer {
+  width: 100vw;
+  height: auto;
+}
+footer .redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding: 2%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 20px;
+}
+footer .redes img {
+  width: 30px;
+  height: 30px;
+}
+@media (max-width: 768px) {
+  footer .redes {
+    margin-top: 1%;
+  }
+  footer .redes img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
