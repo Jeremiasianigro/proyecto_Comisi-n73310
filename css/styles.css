@@ -32,6 +32,7 @@
   border-radius: 40%;
 }
 .navbar .nav-links {
+  background-color: rgba(255, 255, 255, 0.322);
   list-style: none;
   display: flex;
   gap: 20px;
@@ -246,6 +247,9 @@
   border: 1px solid #666;
   border-radius: 5px;
   font-size: 16px;
+}
+.contactanosprincipal form div {
+  background-color: #e6e6e6;
 }
 .contactanosprincipal form button {
   background-color: rgb(120, 40, 100);
