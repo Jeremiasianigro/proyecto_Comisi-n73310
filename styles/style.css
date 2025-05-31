@@ -88,19 +88,6 @@ h2{
 
 
 /*page home*/
-.titulo{
-    margin-top: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: auto;
-     
-}
-.titulo h1{
-    font-family: "titulos";
-    font-size: 30px;
-}
 .imagenhome {
     width: 100vw; 
     height: 100vh;
@@ -140,6 +127,20 @@ h2{
 }
 
 /*page peliculas page series*/
+.titulo{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+     
+}
+.titulo h1{
+    font-family: "titulos";
+    font-size: 30px;
+}
+
 @keyframes zoomIn {
     from {
         transform: scale(1);
@@ -201,10 +202,12 @@ h2{
 }
 
 #descripcion h2 {
+    font-family: "titulos";
     font-size: 2rem; 
 }
 
 #texto {
+    font-family: "texto";
     font-size: 1.2rem; 
     line-height: 1.5; 
 }

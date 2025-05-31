@@ -1,0 +1,46 @@
+@import "mixins";
+@import "variables";
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+.titulo {
+  margin-top: 10%;
+  @include flex-center;
+  width: 100vw;
+
+  h1 {
+    font-family: $font-titles;
+    font-size: 30px;
+  }
+}
+.card {
+  overflow: hidden;
+  background-color: $primary-color;
+  border: none;
+
+  img {
+    height: 500px;
+    width: 350px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        animation: zoomIn 0.3s forwards;
+    }
+  }
+
+  @media (max-width: 768px) {
+    img {
+      height: 400px;
+      width: 250px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import "mixins";
+
+
+.imagenhome {
+  width: 100vw;
+  height: 100vh;
+  @include flex-center;
+
+  #box-imagen-home {
+    width: 80vw;
+    height: 70vh;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+ @media (max-width: 768px) {
+    #box-imagen-home {
+        width: 80vw;
+        height: 50vh;
+        img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       }
+    } 
+  }
+}
