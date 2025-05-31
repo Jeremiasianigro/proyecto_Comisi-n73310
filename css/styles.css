@@ -194,14 +194,16 @@
   line-height: 1.5;
 }
 @media (max-width: 768px) {
-  .nosotrosprincipal .nosotrosprincipal {
-    grid-template-areas: "imagen" "descripcion";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    gap: 10px;
+  .nosotrosprincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     text-align: center;
   }
   .nosotrosprincipal #imagen {
+    width: 90vw;
+    height: auto;
     display: flex;
     justify-content: center;
   }

@@ -14,6 +14,7 @@
     grid-area: imagen;
     display: flex;
     justify-content: center;
+
     img {
       width: 70vw;
       height: 70vh;
@@ -23,9 +24,10 @@
 
   #descripcion {
     grid-area: descripcion;
+
     h2 {
-     font-family: $font-titles;
-     font-size: 2rem;
+      font-family: $font-titles;
+      font-size: 2rem;
     }
   }
 
@@ -34,41 +36,38 @@
     font-size: 1.2rem;
     line-height: 1.5;
   }
+
   @media (max-width: 768px) {
-    .nosotrosprincipal {
-      grid-template-areas: 
-        "imagen"
-        "descripcion";
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto;
-      gap: 10px;
-      text-align: center;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
 
     #imagen {
+      width: 90vw;
+      height: auto;
       display: flex;
       justify-content: center;
-    }
 
-    #imagen img {
-      width: 90vw;
-      height: 60vh;
-      object-fit: cover; 
+      img {
+        width: 90vw;
+        height: 60vh;
+        object-fit: cover;
+      }
     }
 
     #descripcion {
       padding: 10px;
-    }
 
-    #descripcion h2 {
-      font-size: 1.8rem; 
+      h2 {
+        font-size: 1.8rem;
+      }
     }
 
     #texto {
-      font-size: 1rem; 
-      line-height: 1.6; 
+      font-size: 1rem;
+      line-height: 1.6;
     }
   }
-
-
 }
